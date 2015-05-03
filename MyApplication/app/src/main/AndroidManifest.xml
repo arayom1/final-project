@@ -16,6 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Exam"
+            android:label="@string/title_activity_exam" >
+        </activity>
+        <activity
+            android:name=".ExamAdapter"
+            android:label="@string/title_activity_exam_adapter" >
+        </activity>
+        <activity
+            android:name=".RecyclerViewFragment"
+            android:label="@string/title_activity_recycler_view_fragment" >
+        </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

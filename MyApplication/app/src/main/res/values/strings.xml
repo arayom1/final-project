@@ -3,4 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_exam">Exam</string>
+    <string name="title_activity_exam_adapter">ExamAdapter</string>
+    <string name="title_activity_recycler_view_fragment">RecyclerViewFragment</string>
 </resources>
