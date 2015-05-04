@@ -6,4 +6,6 @@
     <string name="title_activity_exam">Exam</string>
     <string name="title_activity_exam_adapter">ExamAdapter</string>
     <string name="title_activity_recycler_view_fragment">RecyclerViewFragment</string>
+    <string name="title_activity_secondary">SecondaryActivity</string>
+    <string name="title_activity_adding">AddingActivity</string>
 </resources>

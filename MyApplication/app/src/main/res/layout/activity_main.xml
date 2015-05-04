@@ -1,9 +1,39 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal|top"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nothing"
+    android:background="#ff464646">
 
-</FrameLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/mybutton"
+        android:background="#ff464646"
+        android:layout_gravity="right"
+        style="@android:style/Animation"
+        android:textSize="50dp"
+        android:textColor="#ff20f8ff"/>
+
+
+    <FrameLayout
+
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="#ff464646">
+
+    </FrameLayout>
+
+    </LinearLayout>
+
+
+
 
