@@ -45,15 +45,15 @@ public class RecyclerViewFragment extends Fragment {
 
         final List<Exam> exams = new ArrayList<>();
 
-//        ParseObject examObject = new ParseObject("ExamObject");
-//        examObject.put("name", "CSIS 221");
-//        examObject.put("date", "05/21");
-//        examObject.put("time", "9am");
-//        examObject.put("classroom", "BR160");
-//        examObject.saveInBackground();
+        ParseObject examObject = new ParseObject("ExamObject");
+        examObject.put("name", "CSIS 221");
+        examObject.put("date", "05/21");
+        examObject.put("time", "9am");
+        examObject.put("classroom", "BR160");
+        examObject.saveInBackground();
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("ExamObject");
-        //query.whereEqualTo("classroom", "BR160");
+        query.whereEqualTo("classroom", "BR160");
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> parseObjects, ParseException e) {
@@ -61,10 +61,10 @@ public class RecyclerViewFragment extends Fragment {
                     exams.add(new Exam(obj.getString("name"),obj.getString("date"),obj.getString("time"),obj.getString("classroom")));
                 }
                 recyclerExams.setAdapter(new ExamAdapter(exams));
-//                ParseObject l = parseObjects.get(0);
-//                String name = l.getString("name");
-//                String classroom = l.getString("classroom");
-//                String date = l.getString("date");
+                ParseObject l = parseObjects.get(0);
+                String name = l.getString("name");
+                String classroom = l.getString("classroom");
+                String date = l.getString("date");
 
             }
         });
@@ -76,16 +76,16 @@ public class RecyclerViewFragment extends Fragment {
 
     }
 
-//    private List<Exam> mockExams() {
+          private List<Exam> mockExams() {
 //        // Creates a list of Exams and fills them up with data
-//        List<Exam> exams = new ArrayList<>();
-//        exams.add(new Exam("CSIS 252","05/15","9AM","BR161"));
-//        exams.add(new Exam("ENG 202","05/15","10AM","LO109"));
-//        exams.add(new Exam("ENG 286","05/15","11AM","BR109"));
-//        exams.add(new Exam("CSIS 320","05/15","12PM","BR160"));
-//        exams.add(new Exam("CSIS 304","05/15","1PM","CB202"));
-//        exams.add(new Exam("MUS 100","05/15","2PM","HA115"));
-//
-//        return exams;
-//    }
+        List<Exam> exams = new ArrayList<>();
+        exams.add(new Exam("CSIS 252","05/15","9AM","BR161"));
+        exams.add(new Exam("ENG 202","05/15","10AM","LO109"));
+        exams.add(new Exam("ENG 286","05/15","11AM","BR109"));
+        exams.add(new Exam("CSIS 320","05/15","12PM","BR160"));
+        exams.add(new Exam("CSIS 304","05/15","1PM","CB202"));
+        exams.add(new Exam("MUS 100","05/15","2PM","HA115"));
+
+        return exams;
+    }
 }
